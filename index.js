@@ -26,10 +26,13 @@ function search(ziggy) {
     ddg.query(query, display_result)
 
     function display_result(err, data) {
-      if (err) return ziggy.say(channel, 'I don\'t know what that is.')
-      var result
+      if (err) return ziggy.say(channel, 'Not right now, ask later.')
+        console.log(data)
 
-      result = remove_def(data.Definition) || data.RelatedTopics[0].Text
+      var result = data.AbstractText ||
+          remove_def(data.Definition) ||
+          data.RelatedTopics[0].Text ||
+          'I don\'t know what that is.'
 
       ziggy.say(channel, result)
     }
