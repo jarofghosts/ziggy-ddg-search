@@ -30,7 +30,7 @@ function search(ziggy) {
 
       var result = data.AbstractText ||
           remove_def(data.Definition) ||
-          data.RelatedTopics[0].Text ||
+          (data.RelatedTopics && data.RelatedTopics[0].Text) ||
           'I don\'t know what that is.'
 
       ziggy.say(channel, result)
