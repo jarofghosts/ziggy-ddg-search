@@ -27,7 +27,6 @@ function search(ziggy) {
 
     function display_result(err, data) {
       if (err) return ziggy.say(channel, 'Not right now, ask later.')
-        console.log(data)
 
       var result = data.AbstractText ||
           remove_def(data.Definition) ||
