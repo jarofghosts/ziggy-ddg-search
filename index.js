@@ -7,9 +7,9 @@ commands = [
   , '!ddg'
 ]
 
-notfound = [
+var notfound = [
     'I don\'t know what that is.'
-    ,'You can expect me to know everything!'
+    ,'You can\'t expect me to know everything!'
     ,'Well if you don\'t know, how am I expected to know?'
 ]
 
@@ -38,7 +38,7 @@ function search(ziggy) {
           remove_def(data.Definition) ||
           (data.RelatedTopics && data.RelatedTopics.length &&
            data.RelatedTopics[0].Text) ||
-          var notfound[Math.floor(Math.random() * notfound.length)]
+          notfound[Math.floor(Math.random() * notfound.length)]
 
       ziggy.say(channel, result)
     }
