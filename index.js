@@ -38,7 +38,7 @@ function search(ziggy) {
           remove_def(data.Definition) ||
           (data.RelatedTopics && data.RelatedTopics.length &&
            data.RelatedTopics[0].Text) ||
-          not_found[Math.floor(Math.random() * notfound.length)]
+          not_found[Math.floor(Math.random() * not_found.length)]
 
       ziggy.say(channel, result)
     }
