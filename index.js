@@ -7,10 +7,10 @@ commands = [
   , '!ddg'
 ]
 
-var notfound = [
+var not_found = [
     'I don\'t know what that is.'
-    ,'You can\'t expect me to know everything!'
-    ,'Well if you don\'t know, how am I expected to know?'
+  , 'You can\'t expect me to know everything!'
+  , 'Well if you don\'t know, how am I expected to know?'
 ]
 
 module.exports = search
@@ -38,10 +38,11 @@ function search(ziggy) {
           remove_def(data.Definition) ||
           (data.RelatedTopics && data.RelatedTopics.length &&
            data.RelatedTopics[0].Text) ||
-          notfound[Math.floor(Math.random() * notfound.length)]
+          not_found[Math.floor(Math.random() * notfound.length)]
 
       ziggy.say(channel, result)
     }
+
     function remove_def(text) {
       return text.replace(query + ' definition', query)
     }
