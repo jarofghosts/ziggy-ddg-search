@@ -11,6 +11,7 @@ var notfound = [
     'I don\'t know what that is.'
     ,'You can\'t expect me to know everything!'
     ,'Well if you don\'t know, how am I expected to know?'
+    ,'Some questions are beter left unanswered...Grasshopper...'
 ]
 
 module.exports = search
