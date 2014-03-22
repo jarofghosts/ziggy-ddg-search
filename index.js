@@ -12,8 +12,8 @@ var not_found = [
     ,'You can\'t expect me to know everything!'
     ,'Well if you don\'t know, how am I expected to know?'
     ,'Some questions are beter left unanswered...Grasshopper...'
-    ,'You can\'t expect me to know everything!'
-    ,'Well if you don\'t know, how am I supposed to know?'
+    ,'Cannot Computer!'
+    ,'I\'m sorry Dave, I can\'t let you do that...'
 ]
 
 module.exports = search
