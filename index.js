@@ -11,7 +11,7 @@ var not_found = [
     'I don\'t know what that is.'
     ,'You can\'t expect me to know everything!'
     ,'Well if you don\'t know, how am I expected to know?'
-    ,'Some questions are beter left unanswered...Grasshopper...'
+    ,'Some questions are better left unanswered...Grasshopper...'
     ,'Cannot Compute, try again!'
     ,'I\'m sorry Dave, I can\'t let you do that...'
 ]
