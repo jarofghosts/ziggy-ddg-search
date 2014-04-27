@@ -1,7 +1,7 @@
 ziggy-ddg-search
 ====
 
-## !whats, !ddg, !search `<query>`
+## !define, !whats, !ddg, !search `<query>`
 
 display query results from DuckDuckGo for `<query>`
 

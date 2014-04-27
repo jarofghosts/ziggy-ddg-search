@@ -4,6 +4,7 @@ var ddg = require('ddg')
 commands = [
     '!search'
   , '!whats'
+  , '!define'
   , '!ddg'
 ]
 
