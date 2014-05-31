@@ -1,6 +1,6 @@
 {
   "name": "ziggy-ddg-search",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "duck duck go search plugin for ziggy",
   "main": "index.js",
   "scripts": {
