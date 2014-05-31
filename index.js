@@ -17,6 +17,8 @@ var not_found = [
   , 'I\'m sorry Dave, I can\'t let you do that...'
 ]
 
+search.help = '!search, !whats, !define, !ddg <term> - define <term>'
+
 module.exports = search
 
 function search(ziggy) {
