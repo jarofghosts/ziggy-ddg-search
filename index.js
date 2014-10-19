@@ -8,7 +8,7 @@ commands = [
   , '!ddg'
 ]
 
-var not_found = [
+var notFound = [
     'I don\'t know what that is.'
   , 'You can\'t expect me to know everything!'
   , 'Well if you don\'t know, how am I expected to know?'
@@ -22,10 +22,10 @@ search.help = '!search, !whats, !define, !ddg <term> - define <term>'
 module.exports = search
 
 function search(ziggy) {
-  ziggy.on('message', parse_message)
-  ziggy.on('pm', parse_pm)
+  ziggy.on('message', parseMessage)
+  ziggy.on('pm', parsePm)
   
-  function parse_message(user, channel, text) {
+  function parseMessage(user, channel, text) {
     var bits = text.split(/\s+/)
 
     var command = bits[0]
@@ -33,28 +33,28 @@ function search(ziggy) {
 
     query = bits.slice(1).join(' ').trim()
 
-    if (commands.indexOf(command) === -1) return
+    if(commands.indexOf(command) === -1) return
 
-    ddg.query(query, display_result)
+    ddg.query(query, displayResult)
 
-    function display_result(err, data) {
-      if (err) return ziggy.say(channel, 'Not right now, ask later.')
+    function displayResult(err, data) {
+      if(err) return ziggy.say(channel, 'Not right now, ask later.')
 
       var result = data.AbstractText ||
-          remove_def(data.Definition) ||
+          removeDef(data.Definition) ||
           (data.RelatedTopics && data.RelatedTopics.length &&
            data.RelatedTopics[0].Text) ||
-          not_found[Math.floor(Math.random() * not_found.length)]
+          notFound[Math.floor(Math.random() * notFound.length)]
 
       ziggy.say(channel, result)
     }
 
-    function remove_def(text) {
+    function removeDef(text) {
       return text.replace(query + ' definition', query)
     }
   }
 
-  function parse_pm(user, text) {
-    parse_message(user, user.nick, text)
+  function parsePm(user, text) {
+    parseMessage(user, user.nick, text)
   }
 }
